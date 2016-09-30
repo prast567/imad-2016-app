@@ -12,10 +12,11 @@ app.get('/article_one',function(req,res)
 {
     res.sendFile(path.join(__dirname,'ui','article_one.html'));
 });
+var count=0;
 app.get('/count',function(req,res)
 {
     count=count+1;
-    res(count);
+    res.send(count.toString());
 });
 
 app.get('/ui/style.css', function (req, res) {
